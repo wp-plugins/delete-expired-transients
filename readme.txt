@@ -6,7 +6,7 @@ Author URI: http://www.webaware.com.au/
 Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
