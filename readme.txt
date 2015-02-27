@@ -2,12 +2,12 @@
 Contributors: webaware
 Plugin Name: Delete Expired Transients
 Plugin URI: http://shop.webaware.com.au/downloads/delete-expired-transients/
-Author URI: http://www.webaware.com.au/
+Author URI: http://webaware.com.au/
 Donate link: http://shop.webaware.com.au/downloads/delete-expired-transients/
 Tags: cache, clean, database, expired, transient, transients, wp_options
 Requires at least: 3.7
-Tested up to: 4.0
-Stable tag: 2.0.2
+Tested up to: 4.1.1
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,11 +29,12 @@ Now optimised for WordPress Multisite.
 
 Many thanks to the generous efforts of our translators:
 
+* French (fr_FR) -- [Mathieu Hays](http://mathieuhays.co.uk/)
 * Norwegian: Bokmål (nb_NO) -- [neonnero](http://www.neonnero.com/)
 * Norwegian: Nynorsk (nn_NO) -- [neonnero](http://www.neonnero.com/)
 * Spanish (es_ES) -- [David Sandoval](http://BieberNoticias.com)
 
-If you'd like to help out by translating this plugin, please [sign up for an account and dig in](http://translate.webaware.com.au/projects/delete-expired-transients).
+If you'd like to help out by translating this plugin, please [sign up for an account and dig in](https://translate.webaware.com.au/projects/delete-expired-transients).
 
 == Installation ==
 
@@ -88,11 +89,11 @@ If you network activate the plugin, it operates differently. You get access to a
 
 The scheduled task also operates differently, batching up sites to clear expired transients once every hour. The scheduled task can be initiated by activity on any blog. Only 5 blogs are cleaned on each run, so up to 120 blogs will be cleaned each day.
 
-NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](http://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean blog.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
+NB: if your website has multiple networks (e.g. if you're running [WP Multi Network](https://wordpress.org/plugins/wp-multi-network/)) then you'll need to network activate it on each network. Each activation only cleans the blogs on that network, e.g. activating on example.com will clean blog.example.com, images.example.com, shop.example.com, but not forum.example.net if that's on a separate network in the multisite.
 
 == Contributions ==
 
-* [Translate into your preferred language](http://translate.webaware.com.au/projects/delete-expired-transients)
+* [Translate into your preferred language](https://translate.webaware.com.au/projects/delete-expired-transients)
 * [Fork me on GitHub](https://github.com/webaware/delete-expired-transients)
 
 == Useful SQL queries ==
@@ -134,24 +135,28 @@ order by t1.option_value desc;`
 
 == Changelog ==
 
-= 2.0.2 [2014-10-10] =
-* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com)!)
+= 2.0.3, 2015-02-28 =
+* fixed: can delete site transients when there are only never-expire site transients
+* added: French translation (thanks, [Mathieu Hays](http://mathieuhays.co.uk/)!)
 
-= 2.0.1 [2014-08-31] =
+= 2.0.2, 2014-10-10 =
+* added: Spanish translation (thanks, [David Sandoval](http://BieberNoticias.com/)!)
+
+= 2.0.1, 2014-08-31 =
 * added: Norwegian translations (thanks, [neonnero](http://www.neonnero.com/)!)
 
-= 2.0.0 [2014-08-27] =
+= 2.0.0, 2014-08-27 =
 * changed: big refactor for better multisite support
 * fixed: site transients not counted properly
 * added: also clean up NextGEN Gallery 2.x display_gallery_rendered_* timeout aliases (thanks, Robert Park!)
 
-= 1.1.1 [2013-12-31] =
+= 1.1.1, 2013-12-31 =
 * fixed: manual deletion performs nonce check, to prevent unauthorised access
 
-= 1.1.0 [2013-10-19] =
+= 1.1.0, 2013-10-19 =
 * fixed: manual delete failed in WordPress multisite installations
 * changed: use LIKE instead of REGEXP in SQL statements, so that database index is utilised (better performance)
 * added: also clean up the essentially transient display_galleries_* timeout aliases for NextGEN Gallery 2.x
 
-= 1.0.0 [2013-07-27] =
+= 1.0.0, 2013-07-27 =
 * initial public release
